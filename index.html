@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adnan Vallippadan | Software Developer Portfolio</title>
+    <meta name="description"
+        content="Explore the portfolio of Adnan Vallippadan, an experienced software developer specializing in Java, Spring Boot, Laravel, and innovative web application development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/mycss.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="My Portfolio" />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+
+    <!-- Scripts -->
+    <script defer src="./js/alpine.min.js"></script>
+    <script src="./js/site.js"></script>
+</head>
+
+<body>
+
+    <nav id="nav-header" x-data="{openMenu: false}">
+        <div class="header" @mousedown.outside="openMenu = false">
+            <div class="header-i">
+                <img src="./img/logo/logo.png">
+                <div class="header-links">
+                    <a href="#home" class="font-semibold font-normal">Home</a>
+                    <a href="#about" class="font-semibold font-normal">About</a>
+                    <a href="#skills" class="font-semibold font-normal">Skills</a>
+                    <a href="#experience" class="font-semibold font-normal">Experience</a>
+                    <a href="#education" class="font-semibold font-normal">Education</a>
+                    <a href="#contact" class="font-semibold font-normal">Contact</a>
+                </div>
+                <div class="menu-button">
+                    <div @click="openMenu = !openMenu">
+                        <img src="./img/icons/menu.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-header" x-show="openMenu" style="display: none;">
+                <a href="#home" class="font-semibold font-normal" @click="openMenu = false">Home</a>
+                <a href="#about" class="font-semibold font-normal" @click="openMenu = false">About</a>
+                <a href="#skills" class="font-semibold font-normal" @click="openMenu = false">Skills</a>
+                <a href="#experience" class="font-semibold font-normal" @click="openMenu = false">Experience</a>
+                <a href="#education" class="font-semibold font-normal" @click="openMenu = false">Education</a>
+                <a href="#contact" class="font-semibold font-normal" @click="openMenu = false">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero-section">
+        <div class="container" id="home">
+            <div class="hero-title-container">
+                <p class="font-xxx-large font-black" id="profile-name">Adnan Vallippadan</p>
+                <p class="font-xx-large font-medium" id="designation">Software Developer</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section">
+        <div class="container column-2" id="about">
+            <div>
+                <p class="font-xx-large font-bold sub-headline">About Me</p>
+                <p class="font-normal font-regular mb-1">I am an experienced Software Developer with over 6 years of
+                    expertise in designing and developing innovative web, mobile, and desktop applications. My
+                    technical skill set spans Java, Spring Boot, Flutter, PHP, Laravel, Javascript, HTML, and CSS,
+                    enabling me to deliver robust and scalable full-stack solutions tailored to diverse business
+                    needs.</p>
+                <p class="font-normal font-regular mb-1">I specialize in creating user-centric applications with
+                    advanced integrations such as Google APIs, automation tools like Zapier, and dynamic plugins for
+                    platforms like PrestaShop. My work focuses on optimizing functionality, enhancing user
+                    experience, and building software that drives efficiency and value.</p>
+                <p class="font-normal font-regular mb-1">With a background as a programming educator, I excel at
+                    mentoring junior developers, fostering team collaboration, and promoting knowledge sharing to
+                    achieve collective growth. I'm passionate about leveraging modern technologies to create
+                    efficient, reliable, and impactful software solutions.</p>
+            </div>
+            <div id="about-image-container">
+                <img src="./img/me.jpg" />
+            </div>
+        </div>
+    </section>
+
+    <section id="skills-section">
+        <div class="container" id="skills">
+            <p class="font-xx-large font-bold sub-headline">Skills</p>
+            <div class="skill-images-container">
+                <figure>
+                    <img src="./img/skills/Java.png" alt="Java">
+                    <figcaption class="font-medium font-small">Java</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/Spring.png" alt="Spring Boot">
+                    <figcaption class="font-medium font-small">Spring Boot</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/JavaScript.png" alt="JavaScript">
+                    <figcaption class="font-medium font-small">Javascript</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/jQuery.png" alt="jQuery">
+                    <figcaption class="font-medium font-small">jQuery</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/Alpine.js.png" alt="Alpine.js">
+                    <figcaption class="font-medium font-small">Alpine.js</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/HTML5.png" alt="HTML">
+                    <figcaption class="font-medium font-small">HTML</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/CSS3.png" alt="CSS">
+                    <figcaption class="font-medium font-small">CSS</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/TailwindCSS.png" alt="Tailwind CSS">
+                    <figcaption class="font-medium font-small">Tailwind CSS</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/Bootstrap.png" alt="Bootstrap">
+                    <figcaption class="font-medium font-small">Bootstrap</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/MongoDB.png" alt="MongoDB">
+                    <figcaption class="font-medium font-small">MongoDB</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/MySQL.png" alt="MySQL">
+                    <figcaption class="font-medium font-small">MySQL</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/Flutter.png" alt="Flutter">
+                    <figcaption class="font-medium font-small">Flutter</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/MaterialUI.png" alt="MaterialUI">
+                    <figcaption class="font-medium font-small">Material UI</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/PHP.png" alt="PHP">
+                    <figcaption class="font-medium font-small">PHP</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/Laravel.png" alt="Laravel">
+                    <figcaption class="font-medium font-small">Laravel</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/BitBucket.png" alt="BitBucket">
+                    <figcaption class="font-medium font-small">BitBucket</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/Confluence.png" alt="Confluence">
+                    <figcaption class="font-medium font-small">Confluence</figcaption>
+                </figure>
+                <figure>
+                    <img src="./img/skills/Jira.png" alt="Jira">
+                    <figcaption class="font-medium font-small">Jira</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience-section">
+        <div class="container" id="experience">
+            <p class="font-xx-large font-bold sub-headline">Experience</p>
+            <div class="exp-outer">
+
+                <div class="exp-1 mb-1">
+                    <div>
+                        <p class="font-large font-semibold mb-1">Software Developer</p>
+                        <div class="mb-1">
+                            <a href="https://talenteam.com/" target="_blank"
+                                class="company-name font-normal font-regular mb-1 text-c-500">TalenTeam</a>
+                            <p class="font-normal font-regular">India (Remote)</p>
+                            <p class="font-normal font-regular text-c-500 mb-1">Mar 2025 - Present</p>
+                        </div>
+                        <div class="work-desctiption column-2">
+                            <div>
+                                <ul class="mb-1">
+                                    <li class="font-normal font-regular mb-0.5">Currently exploring a Learning
+                                        Management System (LMS) project built with Java, Spring Boot, Thymeleaf for
+                                        server-side rendering, and enhanced with JavaScript, HTML, and CSS on the
+                                        frontend."</li>
+                                </ul>
+                            </div>
+                            <div class="company-image-container">
+                                <a href="https://talenteam.com/" target="_blank" class="talenteam">
+                                    <img src="./img/company/talenteam_logo.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-2 mb-1">
+                    <div>
+                        <p class="font-large font-semibold mb-1">Senior Software Developer</p>
+                        <div class="mb-1">
+                            <a href="https://flysoft.eu/" target="_blank"
+                                class="company-name font-normal font-regular mb-1 text-c-500">Flysoft Systems GmbH</a>
+                            <p class="font-normal font-regular">Germany (Remote)</p>
+                            <p class="font-normal font-regular text-c-500 mb-1">Jun 2021 - Feb 2025</p>
+                        </div>
+                        <div class="work-desctiption column-2">
+                            <div class="company-image-container">
+                                <a href="https://flysoft.eu/" target="_blank" class="flysoft">
+                                    <img src="./img/company/flysoft_logo.svg">
+                                </a>
+                            </div>
+                            <div>
+                                <p class="font-normal font-medium mb-1">Web Solutions</p>
+                                <ul class="mb-1">
+                                    <li class="font-normal font-regular mb-0.5">Developed a content management
+                                        system for
+                                        restaurant owners serving as a business website using Java, Spring Boot,
+                                        MongoDB,
+                                        Javascript, HTML & Tailwind CSS.</li>
+                                    <li class="font-normal font-regular mb-0.5">Developed a scan to order & food
+                                        delivery
+                                        web application using Java, Spring Boot, MongoDB, Javascript, jQuery, HTML &
+                                        Tailwind CSS. </li>
+                                    <li class="font-normal font-regular mb-0.5">Utilized reactive programming, unit
+                                        testing,
+                                        Google APIs, Payment Gateways, authentication, OAuth2 etc to improve the
+                                        efficiency
+                                        & functionality of the application.</li>
+                                    <li class="font-normal font-regular mb-0.5">Developed company website in
+                                        collaboration
+                                        with designers using HTML & TailwindCSS.</li>
+                                    <li class="font-normal font-regular mb-0.5">Developed custom modules to enhance
+                                        the
+                                        functionality of PrestaShop ecommerce platform using PHP, Javascript, HTML &
+                                        CSS.
+                                    </li>
+                                </ul>
+                                <p class="font-normal font-medium mb-1">Desktop Solutions</p>
+                                <ul class="mb-1">
+                                    <li class="font-normal font-regular mb-0.5">Contributed to the development of a
+                                        restaurant management application with features such as sales statistics,
+                                        cash book
+                                        management, invoice printing, and synchronization with online order
+                                        solutions using
+                                        Java, JavaFX, and MongoDB.</li>
+                                    <li class="font-normal font-regular mb-0.5">Developed an inventory management
+                                        application to track item inventories, purchases, returns/defects, and
+                                        active stocks
+                                        using Java, Spring Boot, MongoDB, Javascript, jQuery, HTML, and Tailwind
+                                        CSS.</li>
+                                    <li class="font-normal font-regular mb-0.5">Created a supporting translator
+                                        application
+                                        to translate the contents of the main application using Flutter, MaterialUI,
+                                        and the
+                                        DeepL translation provider.</li>
+                                </ul>
+                                <p class="font-normal font-medium mb-1">Mobile Solutions</p>
+                                <ul class="mb-1">
+                                    <li class="font-normal font-regular mb-0.5">Developed a photo application that
+                                        captures
+                                        high-quality images of items and seamlessly synchronizes them with POS and
+                                        cloud
+                                        solutions, using Flutter and MaterialUI.</li>
+                                    <li class="font-normal font-regular mb-0.5">Built a booking manager application
+                                        to
+                                        efficiently handle table reservations for restaurants, ensuring smooth
+                                        operations,
+                                        using Flutter and MaterialUI.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-3 mb-1">
+                    <div>
+                        <p class="font-large font-semibold mb-1">Software Developer</p>
+                        <div class="mb-1">
+                            <a href="https://www.esynergysoft.com/" target="_blank"
+                                class="company-name font-normal font-regular mb-1 text-c-500">eSynergy Software Technologies</a>
+                            <p class="font-normal font-regular">Calicut, India</p>
+                            <p class="font-normal font-regular text-c-500 mb-1">Jul 2019 - May 2021</p>
+                        </div>
+                        <div class="work-desctiption column-2">
+                            <div>
+                                <ul class="mb-1">
+                                    <li class="font-normal font-regular mb-0.5">Collaborated on the development of a
+                                        robust web-based Learning Management System (LMS) featuring course creation,
+                                        sales, and resource sharing, leveraging Laravel, PHP, Javascript, HTML, CSS,
+                                        and Bootstrap.</li>
+                                    <li class="font-normal font-regular mb-0.5">Integrated live class and webinar
+                                        functionality using third-party services to enhance learning experiences.
+                                    </li>
+                                    <li class="font-normal font-regular mb-0.5">Automated student-related processes
+                                        through Zapier workflows, improving operational efficiency.</li>
+                                    <li class="font-normal font-regular mb-0.5">Implemented email client
+                                        integrations with platforms like Mailerlite and Mailchimp for streamlined
+                                        communication and marketing.</li>
+                                    <li class="font-normal font-regular mb-0.5">Mentored and trained junior
+                                        developers, fostering team growth and enhancing technical capabilities.</li>
+                                </ul>
+                            </div>
+                            <div class="company-image-container">
+                                <a href="https://www.esynergysoft.com/" target="_blank" class="esynergy">
+                                    <img src="./img/company/esynergy_logo.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-4 mb-1">
+                    <div>
+                        <p class="font-large font-semibold mb-1">Programming Faculty</p>
+                        <div class="mb-1">
+                            <a href="https://www.gteceducation.com/" target="_blank"
+                                class="company-name font-normal font-regular mb-1 text-c-500">Gtec Computer Education</a>
+                            <p class="font-normal font-regular">Malappuram, India</p>
+                            <p class="font-normal font-regular text-c-500 mb-1">Nov 2018 - Jun 2019</p>
+                        </div>
+                        <div class="work-desctiption column-2">
+                            <div class="company-image-container">
+                                <a href="https://www.gteceducation.com/" target="_blank" class="gtec">
+                                    <img src="./img/company/gtec_logo.png">
+                                </a>
+                            </div>
+                            <div>
+                                <ul class="mb-1">
+                                    <li class="font-normal font-regular mb-0.5">Served as a programming faculty,
+                                        delivering comprehensive training in HTML, CSS, Javascript, .NET, and MySQL.
+                                    </li>
+                                    <li class="font-normal font-regular mb-0.5">Designed and conducted practical
+                                        sessions to enhance students' programming skills.</li>
+                                    <li class="font-normal font-regular mb-0.5">Mentored students in building
+                                        foundational and advanced knowledge of web and database development.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education-section">
+        <div class="container" id="education">
+            <p class="font-xx-large font-bold sub-headline">Education</p>
+            <div class="education-outer">
+                <div class="education-1 mb-1">
+                    <p class="font-large font-semibold mb-1">B.Tech (Electrical & Electronics Engineering)</p>
+                    <p class="font-normal font-regular mb-0.5 text-c-500">Govt Engineering College Wayanad, Kerala
+                    </p>
+                    <p class="font-normal font-regular mb-0.5 text-c-500">2014 - 2018</p>
+                </div>
+                <div class="education-2 mb-1">
+                    <p class="font-large font-semibold mb-1">Higher Secondary (Computer Science)</p>
+                    <p class="font-normal font-regular mb-0.5 text-c-500">HMY HSS Manjeri, Kerala</p>
+                    <p class="font-normal font-regular mb-0.5 text-c-500">2011 -2013</p>
+                </div>
+                <div class="education-3">
+                    <p class="font-large font-semibold mb-1">High School</p>
+                    <p class="font-normal font-regular mb-0.5 text-c-500">THS Manjeri, Kerala</p>
+                    <p class="font-normal font-regular mb-0.5 text-c-500">2008 -2011</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section">
+        <div class="container" id="contact">
+            <p class="font-xx-large font-bold sub-headline">Contact</p>
+            <p class="font-normal font-regular mb-1 text-c-500">Have a question or an exciting opportunity to
+                discuss? Let's connect and create something incredible together. I'm just an email away!</p>
+            <a class="btn-primary font-normal font-semibold" href="mailto:adnanvp10@gmail.com">Email Me</a>
+        </div>
+    </section>
+
+    <footer id="footer-section">
+        <div class="container" id="footer">
+            <div class="social-media mb-1">
+                <a href="https://github.com/adnan-vallippadan" target="_blank">
+                    <img src="./img/social-media/github.svg">
+                </a>
+                <a href="https://www.linkedin.com/in/adnan-vallippadan/" target="_blank">
+                    <img src="./img/social-media/linkedin.svg">
+                </a>
+                <a href="mailto:adnanvp9@gmail.com">
+                    <img src="./img/social-media/email.svg">
+                </a>
+                <a href="https://www.facebook.com/adnan.vp.9/">
+                    <img src="./img/social-media/facebook.svg" target="_blank">
+                </a>
+                <a href="https://www.instagram.com/adnan_vallippadan/">
+                    <img src="./img/social-media/instagram.svg" target="_blank">
+                </a>
+            </div>
+            <div class="font-small font-medium footer-labels">
+                <p class="mb-0.5">Designed and Developed by Adnan&nbsp;Vallippadan.</p>
+                <p>&copy; <span id="year"></span> All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="loading-animation">
+        <div class="inner">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- <div id="designer-block-1" class="designer-block"></div>
+    <div id="designer-block-2" class="designer-block"></div> -->
+
+    <script type="text/javascript">
+        site.initialize();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-11XJTH74Q6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-11XJTH74Q6');
+    </script>
+</body>
+
+</html>
