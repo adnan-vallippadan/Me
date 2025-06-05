@@ -12,6 +12,7 @@ body {
     background-color: var(--background-color);
     overflow-x: hidden;
     line-height: 1.15;
+    scroll-behavior: smooth;
 }
 
 p {
@@ -84,6 +85,11 @@ nav#nav-header {
 
 .menu-button {
     display: none;
+}
+
+.menu-button img {
+    height: 1.75rem;
+    width: auto;
 }
 
 .mobile-header {

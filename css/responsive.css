@@ -9,6 +9,9 @@
 }
 
 @media (max-width: 640px) {
+    .container {
+        padding: 1.5rem;
+    }
     .column-2 {
         flex-wrap: wrap;
     }
@@ -39,6 +42,10 @@
 
     .company-image-container {
         display: none;
+    }
+
+    #experience-section .exp-outer, #education-section .education-outer {
+        padding-left: 1.25rem;
     }
 
 }

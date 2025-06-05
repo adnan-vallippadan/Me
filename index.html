@@ -44,7 +44,8 @@
                 </div>
                 <div class="menu-button">
                     <div @click="openMenu = !openMenu">
-                        <img src="./img/icons/menu.svg">
+                        <img x-show="!openMenu" src="./img/icons/menu.svg">
+                        <img x-show="openMenu" src="./img/icons/close.svg" style="display: none;">
                     </div>
                 </div>
             </div>
