@@ -220,8 +220,15 @@ nav#nav-header {
 }
 
 .company-image-container img {
-    width: 12rem;
+    width: 14rem;
     height: auto;
+    background-color: #ffffff;
+    padding: 0.25rem;
+    border-radius: 0.35rem;
+}
+
+.company-image-container .flysoft img, .company-image-container .gtec img {
+    padding: 0.5rem;
 }
 
 #contact-section {
