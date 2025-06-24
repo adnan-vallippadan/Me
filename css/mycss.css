@@ -61,7 +61,7 @@ p {
 
 nav#nav-header {
     position: sticky;
-    background-color: var(--background-color);
+    background-color: var(--primary-900);
     top: 0;
     right: 0;
     left: 0;
@@ -95,7 +95,7 @@ nav#nav-header {
 .mobile-header {
     display: none;
     background-color: var(--background-color);
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     position: fixed;
     left: 0;
     right: 0;
@@ -129,6 +129,10 @@ nav#nav-header {
     text-decoration: underline;
 }
 
+#hero-section {
+    background-color: var(--primary-900);
+}
+
 #hero-section img {
     border-radius: 50%;
     height: 20rem;
@@ -140,12 +144,12 @@ nav#nav-header {
 }
 
 #profile-name {
-    color: var(--primary-700);
+    color: var(--primary-100);
 }
 
 #designation {
     margin-top: 1rem;
-    color: var(--text-500);
+    color: var(--text-900);
 }
 
 #about-section p:not(.sub-headline) {
@@ -227,7 +231,8 @@ nav#nav-header {
     border-radius: 0.35rem;
 }
 
-.company-image-container .flysoft img, .company-image-container .gtec img {
+.company-image-container .flysoft img,
+.company-image-container .gtec img {
     padding: 0.5rem;
 }
 
@@ -237,7 +242,7 @@ nav#nav-header {
 
 .btn-primary {
     padding: 0.8rem 1.6rem;
-    background-color: var(--primary-700);
+    background-color: var(--primary-900);
     color: var(--text-900);
     border-radius: 0.5rem;
     text-decoration: none;
@@ -246,21 +251,24 @@ nav#nav-header {
 }
 
 #footer-section {
-    background-color: var(--primary-700);
+    background-color: var(--primary-900);
 }
 
-#footer-section .social-media {
+#footer-section .social-media,
+#hero-section .social-media {
     display: flex;
     gap: 1rem;
     justify-content: center;
     align-items: center;
 }
 
-#footer-section .social-media>a {
+#footer-section .social-media>a,
+#hero-section .social-media>a {
     text-decoration: none;
 }
 
-#footer-section .social-media img {
+#footer-section .social-media img,
+#hero-section .social-media img {
     height: 2rem;
     width: 2rem;
 }
@@ -268,6 +276,10 @@ nav#nav-header {
 #footer-section .footer-labels {
     text-align: center;
     color: var(--text-900);
+}
+
+#hero-section .social-media {
+    margin-top: 1rem;
 }
 
 #loading-animation {
