@@ -5,6 +5,7 @@
     .header-i>img {
         height: 3rem;
         width: 3rem;
+        padding: 0.5rem 0;
     }
 }
 
@@ -12,12 +13,15 @@
     .container {
         padding: 1.5rem;
     }
+
     .column-2 {
         flex-wrap: wrap;
     }
-    .header-i {
-            padding: 0.5rem 1.5rem;
+
+    .header-i {        
+        height: 3rem;
     }
+
     .header-links {
         display: none;
     }
@@ -27,7 +31,11 @@
     }
 
     .mobile-header {
-        display: block;
+        display: block;        
+    }
+
+    #hero-section {
+        padding-top: 3rem;
     }
 
     #about-image-container {
@@ -44,7 +52,8 @@
         display: none;
     }
 
-    #experience-section .exp-outer, #education-section .education-outer {
+    #experience-section .exp-outer,
+    #education-section .education-outer {
         padding-left: 1.25rem;
     }
 

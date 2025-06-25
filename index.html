@@ -33,61 +33,65 @@
 
 <body>
 
-    <nav id="nav-header" x-data="{openMenu: false}">
-        <div class="header" @mousedown.outside="openMenu = false">
-            <div class="header-i">
-                <img src="./img/logo/logo.png">
-                <div class="header-links">
-                    <a href="#home" class="font-semibold font-normal">Home</a>
-                    <a href="#about" class="font-semibold font-normal">About</a>
-                    <a href="#skills" class="font-semibold font-normal">Skills</a>
-                    <a href="#experience" class="font-semibold font-normal">Experience</a>
-                    <a href="#education" class="font-semibold font-normal">Education</a>
-                    <a href="#contact" class="font-semibold font-normal">Contact</a>
+    <div id="hero-container">
+        <nav id="nav-header" x-data="{openMenu: false}">
+            <div class="header" @mousedown.outside="openMenu = false">
+                <div class="header-i">
+                    <img src="./img/logo/logo.png">
+                    <div class="header-links">
+                        <a href="#home" class="font-semibold font-normal">Home</a>
+                        <a href="#about" class="font-semibold font-normal">About</a>
+                        <a href="#skills" class="font-semibold font-normal">Skills</a>
+                        <a href="#experience" class="font-semibold font-normal">Experience</a>
+                        <a href="#education" class="font-semibold font-normal">Education</a>
+                        <a href="#contact" class="font-semibold font-normal">Contact</a>
+                    </div>
+                    <div class="menu-button">
+                        <div @click="openMenu = !openMenu">
+                            <img x-show="!openMenu" src="./img/icons/menu.svg">
+                            <img x-show="openMenu" src="./img/icons/close.svg" style="display: none;">
+                        </div>
+                    </div>
                 </div>
-                <div class="menu-button">
-                    <div @click="openMenu = !openMenu">
-                        <img x-show="!openMenu" src="./img/icons/menu.svg">
-                        <img x-show="openMenu" src="./img/icons/close.svg" style="display: none;">
+                <div class="mobile-header" x-show="openMenu" style="display: none;">
+                    <a href="#home" class="font-semibold font-normal" @click="openMenu = false">Home</a>
+                    <a href="#about" class="font-semibold font-normal" @click="openMenu = false">About</a>
+                    <a href="#skills" class="font-semibold font-normal" @click="openMenu = false">Skills</a>
+                    <a href="#experience" class="font-semibold font-normal" @click="openMenu = false">Experience</a>
+                    <a href="#education" class="font-semibold font-normal" @click="openMenu = false">Education</a>
+                    <a href="#contact" class="font-semibold font-normal" @click="openMenu = false">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <section id="hero-section">
+            <div class="container" id="home">
+                <div class="hero-title-container">
+                    <p class="font-xxx-large font-black" id="profile-name">Adnan Vallippadan</p>
+                    <p class="font-xx-large font-medium" id="designation">Software Developer</p>
+                    <div class="social-media mb-1">
+                        <a href="https://github.com/adnan-vallippadan" target="_blank">
+                            <img src="./img/social-media/github.svg">
+                        </a>
+                        <a href="https://www.linkedin.com/in/adnan-vallippadan/" target="_blank">
+                            <img src="./img/social-media/linkedin.svg">
+                        </a>
+                        <a href="mailto:adnanvp9@gmail.com">
+                            <img src="./img/social-media/email.svg">
+                        </a>
+                        <a href="https://www.facebook.com/adnan.vp.9/">
+                            <img src="./img/social-media/facebook.svg" target="_blank">
+                        </a>
+                        <a href="https://www.instagram.com/adnan_vallippadan/">
+                            <img src="./img/social-media/instagram.svg" target="_blank">
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="mobile-header" x-show="openMenu" style="display: none;">
-                <a href="#home" class="font-semibold font-normal" @click="openMenu = false">Home</a>
-                <a href="#about" class="font-semibold font-normal" @click="openMenu = false">About</a>
-                <a href="#skills" class="font-semibold font-normal" @click="openMenu = false">Skills</a>
-                <a href="#experience" class="font-semibold font-normal" @click="openMenu = false">Experience</a>
-                <a href="#education" class="font-semibold font-normal" @click="openMenu = false">Education</a>
-                <a href="#contact" class="font-semibold font-normal" @click="openMenu = false">Contact</a>
-            </div>
-        </div>
-    </nav>
+        </section>
+    </div>
 
-    <section id="hero-section">
-        <div class="container" id="home">
-            <div class="hero-title-container">
-                <p class="font-xxx-large font-black" id="profile-name">Adnan Vallippadan</p>
-                <p class="font-xx-large font-medium" id="designation">Software Developer</p>
-                <div class="social-media mb-1">
-                    <a href="https://github.com/adnan-vallippadan" target="_blank">
-                        <img src="./img/social-media/github.svg">
-                    </a>
-                    <a href="https://www.linkedin.com/in/adnan-vallippadan/" target="_blank">
-                        <img src="./img/social-media/linkedin.svg">
-                    </a>
-                    <a href="mailto:adnanvp9@gmail.com">
-                        <img src="./img/social-media/email.svg">
-                    </a>
-                    <a href="https://www.facebook.com/adnan.vp.9/">
-                        <img src="./img/social-media/facebook.svg" target="_blank">
-                    </a>
-                    <a href="https://www.instagram.com/adnan_vallippadan/">
-                        <img src="./img/social-media/instagram.svg" target="_blank">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section id="about-section">
         <div class="container column-2" id="about">
