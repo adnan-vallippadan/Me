@@ -13,6 +13,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap">
 
+    <link rel="stylesheet" href="./aos/aos.css">
     <link rel="stylesheet" href="./css/colors.css" />
     <link rel="stylesheet" href="./css/mycss.css" />
     <link rel="stylesheet" href="./css/fonts.css" />
@@ -27,7 +28,8 @@
     <link rel="manifest" href="./img/favicon/site.webmanifest" />
 
     <!-- Scripts -->
-    <script defer src="./js/alpine.min.js"></script>
+    <script src="./js/alpine.min.js" defer></script>
+    <script src="./aos/aos.js"></script>
     <script src="./js/site.js"></script>
 </head>
 
@@ -93,7 +95,7 @@
 
 
 
-    <section id="about-section">
+    <section id="about-section" data-aos="fade-up">
         <div class="container column-2" id="about">
             <div>
                 <p class="font-xx-large font-bold sub-headline">About Me</p>
@@ -117,7 +119,7 @@
         </div>
     </section>
 
-    <section id="skills-section">
+    <section id="skills-section" data-aos="fade-up">
         <div class="container" id="skills">
             <p class="font-xx-large font-bold sub-headline">Skills</p>
             <div class="skill-images-container">
@@ -197,7 +199,7 @@
         </div>
     </section>
 
-    <section id="experience-section">
+    <section id="experience-section" data-aos="fade-up">
         <div class="container" id="experience">
             <p class="font-xx-large font-bold sub-headline">Experience</p>
             <div class="exp-outer">
@@ -379,7 +381,7 @@
         </div>
     </section>
 
-    <section id="education-section">
+    <section id="education-section" data-aos="fade-up">
         <div class="container" id="education">
             <p class="font-xx-large font-bold sub-headline">Education</p>
             <div class="education-outer">
@@ -403,7 +405,7 @@
         </div>
     </section>
 
-    <section id="contact-section">
+    <section id="contact-section" data-aos="fade-up">
         <div class="container" id="contact">
             <p class="font-xx-large font-bold sub-headline">Contact</p>
             <p class="font-normal font-regular mb-1 text-c-500">Have a question or an exciting opportunity to
@@ -412,7 +414,7 @@
         </div>
     </section>
 
-    <footer id="footer-section">
+    <footer id="footer-section" data-aos="fade-up">
         <div class="container" id="footer">
             <div class="social-media mb-1">
                 <a href="https://github.com/adnan-vallippadan" target="_blank">
@@ -449,6 +451,7 @@
 
     <script type="text/javascript">
         site.initialize();
+        AOS.init();
     </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-11XJTH74Q6"></script>

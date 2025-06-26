@@ -98,8 +98,7 @@ nav#nav-header {
     padding: 1rem 1.5rem;
     position: fixed;
     left: 0;
-    right: 0;
-    border-top: 2px solid var(--text-900);
+    right: 0;    
     border-bottom: 2px solid var(--text-900);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease;    
