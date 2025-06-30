@@ -34,6 +34,10 @@
         display: block;        
     }
 
+    .sm-nav-bar-primary-900 {
+        background-color: var(--primary-900);
+    }
+
     #hero-section {
         padding-top: 3rem;
     }
