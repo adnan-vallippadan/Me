@@ -1,26 +1,26 @@
-/* ============================================================
-   MAIN.JS — Portfolio Interactivity
-   Adnan Vallippadan Portfolio
-   ============================================================ */
+/* MAIN.JS — Portfolio Interactivity
+   Adnan Vallippadan Portfolio */
 
 'use strict';
 
-/* ── Utilities ──────────────────────────────────────────────── */
+/* Utilities */
 
 const $ = (selector, ctx = document) => ctx.querySelector(selector);
 const $$ = (selector, ctx = document) => [...ctx.querySelectorAll(selector)];
 
 
-/* ── Footer year ────────────────────────────────────────────── */
+/* Footer year */
 
-const yearEl = $('#year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+function initFooterYear() {
+  const yearEl = $('#year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
 
 
-/* ── Navbar: scroll class + active link ─────────────────────── */
+/* Navbar: scroll class + active link */
 
-(function initNav() {
-  const navbar   = $('#navbar');
+function initNav() {
+  const navbar = $('#navbar');
   const navLinks = $$('.nav__link');
   const sections = $$('section[id]');
 
@@ -47,14 +47,14 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
       link.setAttribute('aria-current', href === `#${currentId}` ? 'page' : 'false');
     });
   }
-})();
+}
 
 
-/* ── Mobile drawer ──────────────────────────────────────────── */
+/* Mobile drawer */
 
-(function initMobileMenu() {
+function initMobileMenu() {
   const hamburger = $('#hamburger');
-  const drawer    = $('#mobile-drawer');
+  const drawer = $('#mobile-drawer');
   const drawerLinks = $$('.nav__link', drawer);
 
   if (!hamburger || !drawer) return;
@@ -94,17 +94,17 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   // Close on outside click
   document.addEventListener('click', e => {
     if (drawer.classList.contains('open') &&
-        !drawer.contains(e.target) &&
-        !hamburger.contains(e.target)) {
+      !drawer.contains(e.target) &&
+      !hamburger.contains(e.target)) {
       closeDrawer();
     }
   });
-})();
+}
 
 
-/* ── Scroll reveal ──────────────────────────────────────────── */
+/* Scroll reveal */
 
-(function initScrollReveal() {
+function initScrollReveal() {
   const revealElements = $$('.reveal');
 
   if (!revealElements.length) return;
@@ -123,12 +123,12 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   });
 
   revealElements.forEach(el => observer.observe(el));
-})();
+}
 
 
-/* ── Smooth anchor scroll (extra fallback for older browsers) ── */
+/* Smooth anchor scroll (extra fallback for older browsers) */
 
-(function initSmoothScroll() {
+function initSmoothScroll() {
   $$('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = $(this.getAttribute('href'));
@@ -137,12 +137,12 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-})();
+}
 
 
-/* ── Skill cards stagger animation ─────────────────────────── */
+/* Skill cards stagger animation */
 
-(function initSkillsStagger() {
+function initSkillsStagger() {
   const skillCards = $$('.skill-card');
 
   if (!skillCards.length) return;
@@ -160,12 +160,12 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const skillsSection = $('#skills');
   if (skillsSection) observer.observe(skillsSection);
-})();
+}
 
 
-/* ── Cursor glow effect (desktop only) ─────────────────────── */
+/* Cursor glow effect (desktop only) */
 
-(function initCursorGlow() {
+function initCursorGlow() {
   if (window.matchMedia('(hover: none)').matches) return; // skip touch devices
 
   const glow = document.createElement('div');
@@ -196,7 +196,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     curX += (mouseX - curX) * 0.12;
     curY += (mouseY - curY) * 0.12;
     glow.style.left = `${curX}px`;
-    glow.style.top  = `${curY}px`;
+    glow.style.top = `${curY}px`;
     animId = requestAnimationFrame(animateCursor);
   }
 
@@ -204,4 +204,17 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
   document.addEventListener('mouseenter', () => { glow.style.opacity = '1'; });
-})();
+}
+
+
+/* Initialize all portfolio features */
+
+function initialize() {
+  initFooterYear();
+  initNav();
+  initMobileMenu();
+  initScrollReveal();
+  initSmoothScroll();
+  initSkillsStagger();
+  initCursorGlow();
+}
